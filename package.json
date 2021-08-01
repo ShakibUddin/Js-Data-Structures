@@ -1,0 +1,28 @@
+{
+  "name": "js-data-structures",
+  "version": "1.0.0",
+  "description": "Data structures implementation from scratch using Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShakibUddin/Js-Data-Structures.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Data",
+    "Structure"
+  ],
+  "author": "Md Shakib Uddin Bhuiyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShakibUddin/Js-Data-Structures/issues"
+  },
+  "homepage": "https://github.com/ShakibUddin/Js-Data-Structures#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
