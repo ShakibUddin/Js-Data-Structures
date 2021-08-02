@@ -1,7 +1,7 @@
-# Js-Data-Structures
+# Js-Data-Structures-Algorithms
 (Practice)
-Javascript Data Structures implementation
+Javascript Data Structures and Algorithms implementation
 
 Using Jest for testing
 
-I will keep adding major data structures...
+I will keep adding data structures and algorithms...
