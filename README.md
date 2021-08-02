@@ -1,5 +1,5 @@
 # Js-Data-Structures
 (Practice)
-Javascript Data Structures implementation with Test Driven Development
-
+Javascript Data Structures implementation
+Using Jest for testing
 I will keep adding major data structures...
