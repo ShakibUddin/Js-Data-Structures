@@ -8,7 +8,7 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
-    this.tail = this.head;
+    this.tail = null;
     this.size = 0;
   }
   push(value) {
@@ -16,8 +16,7 @@ class LinkedList {
     if (this.head === null) {
       this.head = node;
       this.tail = this.head;
-    }
-    else {
+    } else {
       node.previousNode = this.tail;
       this.tail.next = node;
       this.tail = node;
@@ -26,9 +25,13 @@ class LinkedList {
     return this.size;
   }
   pop() {
-    let previousNode = this.tail.previousNode
-    this.tail = previousNode;
+    if (this.size === 0) return null;
+    this.tail = this.tail.previousNode;
     this.size--;
+    if (this.size === 0) {
+      this.head = null;
+      this.tail = null;
+    }
     return this.size;
   }
   first() {
@@ -36,6 +39,15 @@ class LinkedList {
   }
   last() {
     return this.tail;
+  }
+  isEmpty() {
+    return this.size === 0 ? true : false;
+  }
+  clear() {
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
+    return this.size;
   }
 }
 
