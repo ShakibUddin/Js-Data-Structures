@@ -1,5 +1,5 @@
 const { test, expect } = require("@jest/globals");
-let [mergeSort, merge] = require("./merge-sort");
+let [mergeSort, merge] = require("../algorithms/merge-sort");
 
 test("sort array", () => {
   expect(mergeSort([-1, 2, 1, 0, 0, 0, -1])).toEqual([-1, -1, 0, 0, 0, 1, 2]);

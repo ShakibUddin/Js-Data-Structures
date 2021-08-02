@@ -1,5 +1,5 @@
-let LinkedList = require("./singly-linked-list");
-let [mergeSort] = require("./merge-sort");
+let LinkedList = require("./data-structures/singly-linked-list");
+let [mergeSort] = require("./algorithms/merge-sort");
 
 //Singly Linked List
 

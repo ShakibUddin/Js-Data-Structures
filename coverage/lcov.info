@@ -1,5 +1,5 @@
 TN:
-SF:merge-sort.js
+SF:algorithms\merge-sort.js
 FN:1,mergeSort
 FN:10,merge
 FNF:2
@@ -44,7 +44,7 @@ BRF:10
 BRH:9
 end_of_record
 TN:
-SF:singly-linked-list.js
+SF:data-structures\singly-linked-list.js
 FN:2,(anonymous_0)
 FN:9,(anonymous_1)
 FN:14,(anonymous_2)

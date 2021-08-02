@@ -1,5 +1,5 @@
 const { test, expect } = require("@jest/globals");
-const LinkedList = require("./singly-linked-list");
+const LinkedList = require("../data-structures/singly-linked-list");
 
 let list = new LinkedList();
 
