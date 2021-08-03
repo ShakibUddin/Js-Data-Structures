@@ -11,10 +11,10 @@ describe("#Adding element", () => {
     expect(list.size).toEqual(3);
   });
   test("First element is declared as head", () => {
-    expect(list.first().value).toEqual(10);
+    expect(list.first.value).toEqual(10);
   });
   test("Returns last element if exists else empty message", () => {
-    expect(list.last().value).toEqual(30);
+    expect(list.last.value).toEqual(30);
   });
 });
 
@@ -37,9 +37,15 @@ describe("#Removing element", () => {
     list.push(50);
     list.push(60);
     expect(list.size).toEqual(3);
-    expect(list.first().value).toEqual(40);
+    expect(list.first.value).toEqual(40);
     list.clear();
     expect(list.size).toEqual(0);
-    expect(list.first()).toEqual(null);
+    expect(list.first).toEqual(null);
+  });
+  test("Removes head and sets heads next to new head", () => {
+    list.push(70);
+    list.push(80);
+    expect(list.removeHead().value).toBe(70);
+    expect(list.first.value).toBe(80);
   });
 });

@@ -7,47 +7,58 @@ class Node {
 }
 class LinkedList {
   constructor() {
-    this.head = null;
-    this.tail = null;
-    this.size = 0;
+    this._head = null;
+    this._tail = null;
+    this._size = 0;
+  }
+  get size() {
+    return this._size;
   }
   push(value) {
     let node = new Node(value);
-    if (this.head === null) {
-      this.head = node;
-      this.tail = this.head;
+    if (this._head === null) {
+      this._head = node;
+      this._tail = this._head;
     } else {
-      node.previousNode = this.tail;
-      this.tail.next = node;
-      this.tail = node;
+      node.previousNode = this._tail;
+      this._tail.next = node;
+      this._tail = node;
     }
-    this.size++;
-    return this.size;
+    this._size++;
+    return this._size;
   }
   pop() {
-    if (this.size === 0) return null;
-    this.tail = this.tail.previousNode;
-    this.size--;
-    if (this.size === 0) {
-      this.head = null;
-      this.tail = null;
+    if (this._size === 0) return null;
+    let tail = this._tail;
+    this._tail = this._tail.previousNode;
+    this._size--;
+    if (this._size === 0) {
+      this._head = null;
+      this._tail = null;
     }
-    return this.size;
+    return tail;
   }
-  first() {
-    return this.head;
+  get first() {
+    return this._head;
   }
-  last() {
-    return this.tail;
+  get last() {
+    return this._tail;
+  }
+  removeHead() {
+    let head = this._head;
+    let newHead = this._head.next;
+    this._head = newHead;
+    this._size--;
+    return head;
   }
   isEmpty() {
-    return this.size === 0 ? true : false;
+    return this._size === 0;
   }
   clear() {
-    this.head = null;
-    this.tail = null;
-    this.size = 0;
-    return this.size;
+    this._head = null;
+    this._tail = null;
+    this._size = 0;
+    return this._size;
   }
 }
 
