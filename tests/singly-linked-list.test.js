@@ -3,7 +3,7 @@ const LinkedList = require("../data-structures/singly-linked-list");
 
 let list = new LinkedList();
 
-describe("#Adding element", () => {
+describe("#Adding element(Singly linked list)", () => {
   test("Adds element at the end of list", () => {
     list.push(10);
     list.push(20);
@@ -18,7 +18,7 @@ describe("#Adding element", () => {
   });
 });
 
-describe("#Removing element", () => {
+describe("#Removing element(Singly linked list)", () => {
   test("Deletes element from the end of list", () => {
     list.pop();
     expect(list.size).toEqual(2);
